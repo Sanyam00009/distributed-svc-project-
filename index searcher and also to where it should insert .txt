@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[]  = {8,9,12,14,18,34,47,1,2,3,4};
+    int low = 0 , high = 10, mid = 0,ans=0 , check = arr[high];
+    while(low<=high)
+    {
+        mid = (low+high)/2;
+        if(arr[mid]>check)
+        low = mid+1;
+        if(arr[mid]<check)
+        {
+        high = low-1;
+        ans = mid;
+    }
+    }
+    printf("%d",ans);
+    return 0;
+}
+
+
+// ques 33 from lete code;
