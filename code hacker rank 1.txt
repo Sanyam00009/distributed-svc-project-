@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int A,B,even_sum=0,odd_sum =0;
+    printf("Enter the start range here: ");
+    scanf("%d",&A);
+    printf("Enter the End range here: ");
+    scanf("%d",&B);
+    for(int i =A;i<=B;i++)
+    {
+        if(i%2==0)
+        {
+            even_sum += i;
+        }
+        else
+        {
+            odd_sum += i;
+        }
+    }
+    int absolute_diff = even_sum - odd_sum;
+    printf("%d",absolute_diff);
+    return 0;
+}
+// code for diff between even and odd in the range ;

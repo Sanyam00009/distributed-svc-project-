@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+float mean_recursive(int arr[], int size, int index, float sum) {
+    if (index == size) {
+        return sum / size;  
+    }
+
+    sum += arr[index]; 
+    return mean_recursive(arr, size, index + 1, sum);  
+}
+
+int main() {
+    int arr[] = {1,5,7,4,9,8,5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    float mean = mean_recursive(arr, size, 0, 0.0);
+
+    printf("Mean of the array using recursion: %0.2f\n", mean);
+
+    return 0;
+}

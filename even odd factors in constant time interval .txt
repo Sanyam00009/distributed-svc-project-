@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include<math.h>
+
+int main()
+{
+   int n ;
+   printf("Enter the digit: ");
+   scanf("%d",&n);
+  
+   int i = sqrt(n);
+       if(i*i == n)
+       {
+           printf("odd number of factors");
+       }
+       
+       else
+       printf("Even number of factors");
+   
+}
+// number of factors is even or odd in constant time interval 

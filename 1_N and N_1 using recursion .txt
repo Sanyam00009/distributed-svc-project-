@@ -1,0 +1,33 @@
+
+#include <stdio.h>
+int i=1;
+int n_one(int n)
+{
+    if(n<1)
+    return 1;
+    else
+    {
+        printf("%d \n",n);
+    }
+    return n_one(n-1);
+}
+int one_n(int n)
+{
+    if(n>0)
+    {
+        one_n(n-1);
+        printf("%d\n",n);
+    }
+    else return 0;
+}
+int main()
+{
+    int n = 0;
+    printf("Enter the number here: ");
+    scanf("%d",&n);
+    printf("printing 1 to n\n");
+    one_n(n);
+    printf("printing n to 1\n");
+    n_one(n);
+    return 0;
+}
