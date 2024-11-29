@@ -1,0 +1,31 @@
+class Solution {
+    public int majorityElement(int[] nums) {
+        
+        int size = nums.length;
+        int majority = nums[0];
+        int count=1;
+        for(int i = 1;i< size;i++)
+        {
+            if(nums[i]==majority)
+            count++;
+            else{
+            count--;
+
+            if(count == 0)
+            {
+                majority = nums[i+1];
+                i++;
+                count = 1;
+            }
+            }
+
+        }
+        if(count>size/2)
+        {
+ return majority;
+        }
+       
+       return majority;
+    }
+}
+// code to find majority element 
