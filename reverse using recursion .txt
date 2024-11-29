@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void reverseS(char *arr) {
+    if (*arr) {
+        reverseS(arr + 1);
+        printf("%c", *arr);
+    }
+}
+
+int main() {
+    char arr[] = "sanyam singhal";
+    reverseS(arr);
+    return 0;
+}

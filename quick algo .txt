@@ -1,0 +1,26 @@
+quicksort(low,high,arr)
+{
+if(low>high)
+return;
+int pivot = partition(low,high,arr)
+quicksort(low,pivot,arr);
+quicksort(pivot+1,high,arr);
+}
+
+int partition()
+{
+while(low<=high)
+{
+int i= low ,j= high;
+do{
+i++;}while(arr[i]>=arr[pivot]);
+do{
+j--;}while(arr[j]<=arr[pivot]);
+
+if(i>j)
+swap(arr[i],arr[j]);
+}
+return j ;
+}
+// algorithm of quick sort 
+
