@@ -1,0 +1,34 @@
+// BIT MANIPULATION USING DP in C++
+class Solution {
+public:
+    vector<int> countBits(int n) {
+        vector<int>ans(n+1);
+        ans[0]= 0;
+        for(int i = 0;i<=n;i++)
+        {
+            if(i%2==1) ans[i]=ans[i/2]+1;
+            else ans[i]= ans[i/2];
+        }
+        return ans;
+    }
+};
+
+// BIT MANIPULATION USING FOR AND WHILE LOOP IN JAVA 
+class Solution {
+    public int[] countBits(int n) {
+        int [] arr = new int[n+1];
+        for(int i = 1; i<=n;i++)
+        {
+           int count = 0;int x = i;
+           while(x>0)
+           {
+            if(x%2==1)count++;
+            x = x/2;
+           } 
+           arr[i] = count;
+        }
+        return arr;
+    }
+}
+
+// lete code question 338

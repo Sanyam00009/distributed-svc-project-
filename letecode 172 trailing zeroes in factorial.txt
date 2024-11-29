@@ -1,0 +1,14 @@
+// trailing zeroes // lete code 172
+
+class Solution {
+public:
+    int trailingZeroes(int n) {
+        int count = 0 , y= 5;
+        while(y<=n)
+        {
+        count = count + (n/y);
+        y = y*5;
+        }
+        return count;
+    }
+};
